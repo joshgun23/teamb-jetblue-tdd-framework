@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.ConfigReader;
 import utils.Driver;
+import utils.SeleniumUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,7 +28,7 @@ public class TestBase {
         WebElement element1 = Driver.getDriver().findElement(By.xpath("//*[@class=\"truste_popframe\"]"));
         Driver.getDriver().switchTo().frame(element1);
         Driver.getDriver().findElement(By.xpath("//a[@class='call']")).click();
-        Thread.sleep(2000);
+        SeleniumUtils.waitFor(2);
     }
 
     @AfterMethod (alwaysRun = true)
