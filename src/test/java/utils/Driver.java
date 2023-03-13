@@ -9,7 +9,7 @@ import org.openqa.selenium.safari.SafariDriver;
 public class Driver {
     private static WebDriver driver;
 
-    private Driver(){} //to prevent instantiation
+    private Driver(){} //to prevent instantiation ****
 
     public static WebDriver getDriver(){
 
