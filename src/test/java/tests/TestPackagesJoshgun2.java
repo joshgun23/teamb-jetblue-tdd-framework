@@ -29,22 +29,4 @@ public class TestPackagesJoshgun2 extends TestBase{
         Assert.assertTrue(Driver.getDriver().getPageSource().contains(packagesInUrl_2.getGetmesage()));
     }
 
-
-
-
-
-//    @Test
-//    public void travel_Insurance() throws InterruptedException {
-//
-//        Driver.getDriver().findElement(By.xpath("(//span[contains(text(),'Travel Insurance')])[1]")).click();
-//        Assert.assertTrue(Driver.getDriver().getPageSource().contains("Travel Insurance"));
-//    }
-//    @Test
-//    public void Paisly() throws InterruptedException {
-//
-//        Driver.getDriver().findElement(By.xpath("(//span[contains(text(),'Paisly')])[1]")).click();
-//        Assert.assertTrue(Driver.getDriver().getPageSource().contains("Paisly"));
-//    }
-
-
 }
