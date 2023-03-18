@@ -17,6 +17,6 @@ public class FlightsHotel extends TestBase {
 
     public void testFlightsHotel() {
         JetBlueHomePage jetBlueHomePage = new JetBlueHomePage();
-        jetBlueHomePage.getFromOriginButton().sendKeys("New York");
+        jetBlueHomePage.getFromOriginButton().sendKeys("Atlanta");
     }
 }
