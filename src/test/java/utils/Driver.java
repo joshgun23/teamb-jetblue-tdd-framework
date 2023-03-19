@@ -7,7 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
-    public static WebDriver driver;
+
+private static WebDriver driver;
 
     private Driver(){} //to prevent instantiation
 
@@ -17,7 +18,6 @@ public class Driver {
 
         if(driver == null) { // check if the driver is initialized
 
-            // if not, initialize using the value from properties file
             switch (browser) {
                 case "chrome":
                     driver = new ChromeDriver();
@@ -45,9 +45,9 @@ public class Driver {
 
     public static void quitDriver(){
 
-        if(driver != null){
-            driver.quit();
-            driver = null;
+        if(driver != null){  // if the driver is active
+            driver.quit();  // quit the driver
+            driver = null;  // set the driver variable value to null because next initialization of driver checks if it is null
         }
 
     }
