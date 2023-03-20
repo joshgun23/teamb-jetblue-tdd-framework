@@ -9,31 +9,37 @@ import utils.Driver;
 public class JetBlueHomePage {
 
     public JetBlueHomePage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
     // LOCATORS
 
-    @FindBy(xpath = "//span[class='Flights + Hotel']")
+    @FindBy(xpath = "//span[contains(text(),'Flights + Hotel')]")
     private WebElement flightsHotelButton;
-    @FindBy(id = "text-field-primary")
+    @FindBy(xpath = "//input[@id='jb-autocomplete-3-search']")
     private WebElement fromOriginButton;
 
-    @FindBy(id="jb-autocomplete-2-search")
+    @FindBy(xpath = "//input[@id='jb-autocomplete-4-search']")
     private WebElement toDestinationButton;
 
-    @FindBy(id="jb-date-picker-input-id-0")
+    @FindBy(xpath = "//input[@id='jb-date-picker-input-id-2']")
     private WebElement departDateButton;
 
-    @FindBy(id="jb-date-picker-input-id-1")
+    @FindBy(xpath = "//input[@id='jb-date-picker-input-id-3']")
     private WebElement returnDateButton;
 
-    @FindBy(xpath = "//button[@class='btn btn-action'][contains(text(),'Search Flights + Hotel')]")
+    @FindBy(xpath = "//span[normalize-space()='Search flights + hotel']")
     private WebElement searchFlightsHotelButton;
 
-    @FindBy(xpath = "//input[@name='trueblue-checkbox'][@type='checkbox']")
-    private WebElement useTrueBluePointsCheckbox;
+    @FindBy(xpath = "//span[@class='s-body royal-blue hover-core-blue b mr2']")
+    private WebElement selectRooms;
+
+    @FindBy(xpath = "//button[@aria-label='add room']")
+    private WebElement addRoom;
+
+    @FindBy(xpath = "//button[@aria-label='add adult']")
+    private WebElement addAdult;
 
 
 // Return methods
@@ -62,8 +68,17 @@ public class JetBlueHomePage {
         return searchFlightsHotelButton;
     }
 
-    public WebElement getUseTrueBluePointsCheckbox() {
-        return useTrueBluePointsCheckbox;
+    public WebElement getSelectRooms() {
+        return selectRooms;
+    }
+
+    public WebElement getAddRoom() {
+        return addRoom;
+    }
+
+    public WebElement getAddAdult() {
+        return addAdult;
     }
 
 }
+
