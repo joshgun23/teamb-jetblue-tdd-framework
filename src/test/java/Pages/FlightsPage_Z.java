@@ -1,11 +1,12 @@
 package Pages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.Driver;
 
 public class FlightsPage_Z {
+  public FlightsPage_Z(){PageFactory.initElements(Driver.getDriver(), this);}
     WebDriver driver;
 
     @FindBy(id = "jb-radio-1")
@@ -31,7 +32,7 @@ public class FlightsPage_Z {
 
     public FlightsPage_Z(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+
     }
 
     public void enterFlightDetails(String origin, String destination, String departureDate, String passengers) {
@@ -46,7 +47,9 @@ public class FlightsPage_Z {
         destinationInput.sendKeys(destination);
         departureDateInput.sendKeys(departureDate);
         returnDateInput.sendKeys(returnDate);
-        // Enter passenger details here
+        // Enter passenger details
+
+
     }
 
     public void clickOneWayButton() {
@@ -59,5 +62,15 @@ public class FlightsPage_Z {
 
     public void clickSearchButton() {
         searchButton.click();
+    }
+
+    public void selectFlight(int i) {
+        // Select the flight
+
+
+
+
+
+
     }
 }

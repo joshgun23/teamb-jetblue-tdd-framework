@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PassengerDetailsPage_Z {
+    public PassengerDetailsPage_Z(){PageFactory.initElements(driver, this);}
     WebDriver driver;
     @FindBy(id = "jb-passenger-first-name-0")
     WebElement firstNameInput;
@@ -27,7 +28,7 @@ public class PassengerDetailsPage_Z {
 
     public PassengerDetailsPage_Z(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+
     }
 
     public void enterPassengerDetails(String firstName, String lastName, String gender, String dateOfBirth) {

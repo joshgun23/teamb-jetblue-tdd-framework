@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PaymentPage_Z {
+    public PaymentPage_Z(){PageFactory.initElements(driver, this);}
     WebDriver driver;
     @FindBy(id = "jb-payment-card-number")
     WebElement cardNumberInput;
@@ -19,9 +20,10 @@ public class PaymentPage_Z {
     @FindBy(css = "button[data-analytics-id='btn-submit']")
     WebElement submitButton;
 
+
     public PaymentPage_Z(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+
     }
 
     public void enterPaymentDetails(String cardNumber, String expirationDate, String securityCode) {
