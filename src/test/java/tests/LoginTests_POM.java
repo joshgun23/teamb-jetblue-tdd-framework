@@ -19,7 +19,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
         loginJetB.clickLoginButton();
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site\"");
     }
-    @Test
+    @Test //(priority = 1)
     public void positivePageObjectModel(){
 
         LoginJetB loginPage = new LoginJetB();
@@ -30,7 +30,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
         //when we do it test webaplication not give permisein to sign in
 
     }
-    @Test
+    @Test (groups = {"smoke"})//(priority = 2)
     public void negativ2() throws InterruptedException  {
 
 
@@ -51,7 +51,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site\"");
     }
     @Test
-    public void negatovPagefactory4(){
+    public void negatovPom4(){
 
         LoginJetB loginPage = new LoginJetB();
         loginPage.enterUsername("454545");
@@ -61,7 +61,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
 
     }
     @Test
-    public void negatovPagefactory5(){
+    public void negatovPom5(){
 
         LoginJetB loginPage = new LoginJetB();
         loginPage.enterUsername("454545");
@@ -71,7 +71,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
 
     }
     @Test
-    public void negatovPagefactory6(){
+    public void negatovPom6(){
 
         LoginJetB loginPage = new LoginJetB();
         loginPage.enterUsername("afhjadhfjhaj");
@@ -81,7 +81,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
 
     }
     @Test
-    public void negatovPagefactory7(){
+    public void negatovPom7(){
 
         LoginJetB loginPage = new LoginJetB();
         loginPage.enterUsername("-154545454");
@@ -91,7 +91,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
 
     }
     @Test
-    public void negatovPagefactory8(){
+    public void negatovPom8(){
 
         LoginJetB loginPage = new LoginJetB();
         loginPage.enterUsername("-154545454");

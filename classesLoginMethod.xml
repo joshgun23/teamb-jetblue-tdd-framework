@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Teamb Tests">
+
+    <test name="JetBlue Tests">
+
+        <classes>
+            <class name="tests.LoginTests_PageFactory">
+                <methods>
+                    <include name="negativ"/>
+                    <include name="positivePagefactory"/>
+                </methods>
+            </class>
+
+            <class name="tests.LoginTests_POM">
+                <methods>
+                    <include name="negativ"/>
+                    <include name="positivePageObjectModel"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>

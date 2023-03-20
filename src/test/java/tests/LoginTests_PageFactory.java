@@ -19,7 +19,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         loginJetB.clickLoginButton();
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
     }
-    @Test
+    @Test (groups = {"smoke"})//(priority = 1)
     public void positivePagefactory(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -30,7 +30,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertEquals( Driver.getDriver().getTitle(), "Sign In | JetBlue");//when we do it test webaplication not give permisein to sign in
 
     }
-    @Test
+    @Test //(priority = 2)
     public void negatovPagefactory2(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
