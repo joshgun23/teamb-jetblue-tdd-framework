@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
 public class FlightsPage_Z {
-  public FlightsPage_Z(){PageFactory.initElements(Driver.getDriver(), this);}
+    public FlightsPage_Z(){PageFactory.initElements(Driver.getDriver(), this);}
     WebDriver driver;
 
     @FindBy(id = "jb-radio-1")

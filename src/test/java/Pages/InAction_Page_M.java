@@ -12,7 +12,7 @@ public class InAction_Page_M {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
-        @FindBy(linkText="JetBlue For Good")
+        @FindBy(linkText="JetBlue for Good")
         public WebElement ForGood;
 
 
@@ -20,7 +20,7 @@ public class InAction_Page_M {
         public WebElement sustain;
 
 
-        @FindBy(linkText="Diversity Equity & Inclusion")
+        @FindBy(linkText="Diversity, Equity & Inclusion")
         public WebElement inclusion;
 
 

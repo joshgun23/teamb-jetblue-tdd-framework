@@ -18,9 +18,9 @@ public class inAction_M extends TestBase {
           Thread.sleep(1000);
           inAct.ForGood.click();
 
-          Assert.assertTrue(Driver.getDriver().getTitle().contains("JetBlue | Areas of Focus "));
+     Assert.assertEquals(Driver.getDriver().getTitle(),"JetBlue For Good | JetBlue");
           System.out.println(Driver.getDriver().getTitle());
-          System.out.println(" JetBlue For Good page is displayed");
+         // System.out.println(" JetBlue For Good page is displayed");
       }
 
 
