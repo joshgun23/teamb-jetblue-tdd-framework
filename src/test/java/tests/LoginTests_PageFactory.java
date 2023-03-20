@@ -50,4 +50,54 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
+    @Test
+    public void negatovPagefactory4(){
+
+        LoginJetB_2 loginPage = new LoginJetB_2();
+        loginPage.enterUsername("454545");
+        loginPage.enterPassword("12456");
+        loginPage.clickLoginButton();
+        Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
+
+    }
+    @Test
+    public void negatovPagefactory5(){
+
+        LoginJetB_2 loginPage = new LoginJetB_2();
+        loginPage.enterUsername("454545");
+        loginPage.enterPassword("bkkhkj");
+        loginPage.clickLoginButton();
+        Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
+
+    }
+    @Test
+    public void negatovPagefactory6(){
+
+        LoginJetB_2 loginPage = new LoginJetB_2();
+        loginPage.enterUsername("afhjadhfjhaj");
+        loginPage.enterPassword("-125454");
+        loginPage.clickLoginButton();
+        Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
+
+    }
+    @Test
+    public void negatovPagefactory7(){
+
+        LoginJetB_2 loginPage = new LoginJetB_2();
+        loginPage.enterUsername("-154545454");
+        loginPage.enterPassword("-125454");
+        loginPage.clickLoginButton();
+        Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
+
+    }
+    @Test
+    public void negatovPagefactory8(){
+
+        LoginJetB_2 loginPage = new LoginJetB_2();
+        loginPage.enterUsername("-154545454");
+        loginPage.enterPassword("kljskfkl");
+        loginPage.clickLoginButton();
+        Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
+
+    }
 }
