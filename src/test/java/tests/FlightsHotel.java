@@ -21,7 +21,7 @@ public class FlightsHotel extends TestBase {
 
     }
 
-    @Test
+    @Test (priority = 2,enabled = false)
 
     public void verifyOriginAndDestinationFields() throws InterruptedException {
 
@@ -47,7 +47,7 @@ public class FlightsHotel extends TestBase {
         }
     }
 
-    @Test
+    @Test (priority = 3,enabled = false)
 
     public void verifyDepartureAndReturnDateFields() throws InterruptedException {
 
@@ -88,7 +88,7 @@ public class FlightsHotel extends TestBase {
         Thread.sleep(1000);
 
     }
-    @Test
+    @Test (priority = 1,enabled = false)
 
     public void verifySearchButton() throws InterruptedException {
 

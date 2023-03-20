@@ -7,12 +7,129 @@ import org.openqa.selenium.support.ui.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 
 public class SeleniumUtils {
+    public static void clickRadioOrCheckbox(List<WebElement> elementList, String value) {
+        for (WebElement el : elementList) {
+            String actualValue = el.getAttribute("value").trim();
+
+            if (actualValue.equals(value) && el.isEnabled()) {
+                el.click();
+                break;
+            }
+        }
+    }
+    public static void selectDropdown(WebElement element, String visibleText) {
+        try {
+            Select sel = new Select(element);
+            sel.selectByVisibleText(visibleText);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void selectDropdown(WebElement element, int index) {
+        try {
+            Select sel = new Select(element);
+            int size = sel.getOptions().size();
+            if (size > index) {
+                sel.selectByIndex(index);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void acceptAlert() {
+        try {
+            Alert alert = Driver.getDriver().switchTo().alert();
+            alert.accept();
+        } catch (NoAlertPresentException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void dismissAlert() {
+        try {
+            Alert alert = Driver.getDriver().switchTo().alert();
+            alert.dismiss();
+        } catch (NoAlertPresentException e) {
+            e.printStackTrace();
+        }
+    }
+    public static String getAlertText() {
+        String alertText = null;
+
+        try {
+            Alert alert = Driver.getDriver().switchTo().alert();
+            alertText = alert.getText();
+        } catch (NoAlertPresentException e) {
+            e.printStackTrace();
+        }
+
+        return alertText;
+    }
+    public static void sendAlertText(String text) {
+        try {
+            Alert alert = Driver.getDriver().switchTo().alert();
+            alert.sendKeys(text);
+        } catch (NoAlertPresentException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void switchToFrame(String nameOrId) {
+        try {
+            Driver.getDriver().switchTo().frame(nameOrId);
+        } catch (NoSuchFrameException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void switchToFrame(int index) {
+        try {
+            Driver.getDriver().switchTo().frame(index);
+        } catch (NoSuchFrameException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void switchToFrame(WebElement element) {
+        try {
+            Driver.getDriver().switchTo().frame(element);
+        } catch (NoSuchFrameException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void switchToChildWindow() {
+        String mainWindow = Driver.getDriver().getWindowHandle();
+        Set<String> handles = Driver.getDriver().getWindowHandles();
+
+        for (String handle : handles) {
+            if (!mainWindow.equals(handle)) {
+                Driver.getDriver().switchTo().window(handle);
+                break;
+            }
+        }
+    }
+    public static JavascriptExecutor getJSObject() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        return js;
+        // in one line
+//		return (JavascriptExecutor) driver;
+    }
+    public static void jsClick1(WebElement element) {
+        getJSObject().executeScript("arguments[0].click();", element);
+    }
+    public static void scrollToElement1(WebElement element) {
+        getJSObject().executeScript("arguments[0].scrollIntoView(true)", element);
+    }
+    public static void scrollDown(int pixel) {
+
+        getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
+    }
+
     public static void switchToWindow(String targetTitle) {
 
         String origin = Driver.getDriver().getWindowHandle();
@@ -24,7 +141,30 @@ public class SeleniumUtils {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+    public static void scrollUp(int pixel) {
+        getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
+    }
+    public static void selectCalendarDate(List<WebElement> elements, String date) {
+        for (WebElement day : elements) {
+            if (day.isEnabled()) {
+                if (day.getText().equals(date)) {
+                    day.click();
+                    break;
+                }
+            } else {
+                System.out.println("This day is not enabled!");
+                break;
+            }
+        }
 
+    }
+    public static String getTimeStamp() {
+        Date date = new Date();
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+
+        return sdf.format(date);
+    }
 
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());

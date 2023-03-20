@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Teamb Tests">
+
+    <test name="JetBlue Tests">
+
+        <classes>
+            <class name="tests.JoinTodayJoshgun2"/>
+            <class name="tests.LoginTests_PageFactory"/>
+            <class name="tests.LoginTests_POM"/>
+            <class name="tests.PaisyJoshgun2"/>
+            <class name="tests.SignInJoshgun2"/>
+            <class name="tests.TestPackagesJoshgun2"/>
+            <class name="tests.TestTravelInsuranseJoshgun2"/>
+            <class name="tests.TestRegularJoshgun"/>
+            <class name="tests.EmailJoshgun2"/>
+            <class name="tests.TrueBlueJoshgun2"/>
+
+        </classes>
+
+    </test>
+
+</suite>
