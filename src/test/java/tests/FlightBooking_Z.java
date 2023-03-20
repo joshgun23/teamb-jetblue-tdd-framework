@@ -8,7 +8,7 @@ import static utils.Driver.driver;
 public class FlightBooking_Z extends TestBase{
     @Test
         public void bookFlight() {
-            HomePage_Z homePage = new HomePage_Z(driver);
+            HomePage_Z homePage = new HomePage_Z();
             homePage.selectOneWay();
             homePage.enterOrigin("JFK");
             homePage.enterDestination("LAX");
@@ -16,22 +16,22 @@ public class FlightBooking_Z extends TestBase{
             homePage.selectPassengers(1, 0, 0);
             homePage.clickSearchButton();
 
-            FlightsPage_Z flightsPage = new FlightsPage_Z(driver);
+            FlightsPage_Z flightsPage = new FlightsPage_Z();
             flightsPage.selectFlight(0);
 
 
-            FlightDetailsPage_Z flightDetailsPage = new FlightDetailsPage_Z(driver);
+            FlightDetailsPage_Z flightDetailsPage = new FlightDetailsPage_Z();
             flightDetailsPage.clickContinueButton();
 
-            PassengerDetailsPage_Z passengerDetailsPage = new PassengerDetailsPage_Z(driver);
+            PassengerDetailsPage_Z passengerDetailsPage = new PassengerDetailsPage_Z();
             passengerDetailsPage.enterPassengerDetails("John", "Doe", "male", "1990-01-01");
             passengerDetailsPage.clickContinueButton();
 
-            PaymentPage_Z paymentPage = new PaymentPage_Z(driver);
+            PaymentPage_Z paymentPage = new PaymentPage_Z();
             paymentPage.enterPaymentDetails("1234567890123456", "12/25", "123");
             paymentPage.clickSubmitButton();
 
-            ConfirmationPage_Z confirmationPage = new ConfirmationPage_Z(driver);
+            ConfirmationPage_Z confirmationPage = new ConfirmationPage_Z();
             confirmationPage.verifyConfirmationPage();
         }
     }

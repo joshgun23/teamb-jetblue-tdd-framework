@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchResultsPage_Z {
+    public SearchResultsPage_Z(){PageFactory.initElements(driver, this);}
     WebDriver driver;
 
     @FindBy(css = "h1.page-title__title")
@@ -22,11 +23,12 @@ public class SearchResultsPage_Z {
 
     public SearchResultsPage_Z(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+
     }
 
     public void verifySearchResultsPage() {
         // Verify search results page is displayed
+
     }
 
     public void selectFilter(String filterName) {
