@@ -1,19 +1,9 @@
 package tests;
 
-import Pages.PackagesInUrl;
-import Pages.Policies_Page;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import pages.Policies_Page;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
 import utils.Driver;
-
-import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
 
 public class TestPolicyZaur extends TestBase {
 

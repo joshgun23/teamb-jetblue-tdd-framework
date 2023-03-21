@@ -1,9 +1,7 @@
 package tests;
 
-import Pages.Paisy;
-import Pages.Paisy2;
-import Pages.TrueBlueButton;
-import Pages.TrueBlueButton2;
+import pages.TrueBlueButton;
+import pages.TrueBlueButton2;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;

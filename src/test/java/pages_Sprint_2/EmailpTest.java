@@ -1,13 +1,13 @@
-package Pages;
+package pages_Sprint_2;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
-public class Emailp2 {
+public class EmailpTest {
 
-    public Emailp2(){
+    public EmailpTest(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

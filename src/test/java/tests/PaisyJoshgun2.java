@@ -1,9 +1,7 @@
 package tests;
 
-import Pages.Paisy;
-import Pages.Paisy2;
-import Pages.Travel_Insurance;
-import Pages.Travel_Insurance2;
+import pages.Paisy;
+import pages.Paisy2;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;

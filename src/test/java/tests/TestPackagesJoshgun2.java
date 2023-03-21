@@ -1,8 +1,7 @@
 package tests;
 
-import Pages.PackagesInUrl;
-import Pages.PackagesInUrl_2;
-import org.openqa.selenium.By;
+import pages.PackagesInUrl;
+import pages.PackagesInUrl_2;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;

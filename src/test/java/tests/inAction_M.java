@@ -1,6 +1,6 @@
 package tests;
 
-import Pages.InAction_Page_M;
+import pages.InAction_Page_M;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;

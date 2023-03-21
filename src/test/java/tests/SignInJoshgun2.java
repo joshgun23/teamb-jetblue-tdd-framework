@@ -1,9 +1,9 @@
 package tests;
 
-import Pages.SignIn;
-import Pages.SignIn2;
-import Pages.TrueBlueButton;
-import Pages.TrueBlueButton2;
+import pages.SignIn;
+import pages.SignIn2;
+import pages.TrueBlueButton;
+import pages.TrueBlueButton2;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;

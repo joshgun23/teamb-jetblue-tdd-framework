@@ -1,7 +1,6 @@
 package tests;
 
-import Pages.LoginJetB;
-import Pages.LoginJetB_2;
+import pages.LoginJetB;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.ConfigReader;

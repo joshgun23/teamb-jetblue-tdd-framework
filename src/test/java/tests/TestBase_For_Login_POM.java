@@ -1,7 +1,7 @@
 package tests;
 
-import Pages.SignIn;
-import Pages.TrueBlueButton;
+import pages.SignIn;
+import pages.TrueBlueButton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
