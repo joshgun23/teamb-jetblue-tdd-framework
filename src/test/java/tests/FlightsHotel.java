@@ -110,5 +110,3 @@ public class FlightsHotel extends TestBase {
     }
 }
 
-
-
