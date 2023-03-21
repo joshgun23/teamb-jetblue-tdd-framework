@@ -1,6 +1,6 @@
 package Tests_Sprint_2;
 
-import Pages.*;
+import pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.TestBase;

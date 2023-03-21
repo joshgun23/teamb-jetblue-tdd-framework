@@ -1,9 +1,8 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Driver;
-import utils.SeleniumUtils;
 
 public class LoginJetB {
 

@@ -1,6 +1,6 @@
 package tests;
 
-import Pages.*;
+import pages.*;
 import org.testng.annotations.Test;
 
 //import static utils.Driver;
