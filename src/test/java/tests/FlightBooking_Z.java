@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 //import static utils.Driver;
 
-public class FlightBooking_Z extends TestBase{
+public class FlightBooking_Z extends TestBase2{
     @Test (priority = 1,enabled = false)
     public void bookFlight() {
         HomePage_Z homePage = new HomePage_Z();

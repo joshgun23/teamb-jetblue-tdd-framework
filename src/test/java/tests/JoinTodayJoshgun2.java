@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class JoinTodayJoshgun2 extends TestBase{
+public class JoinTodayJoshgun2 extends TestBase2{
 
 
 

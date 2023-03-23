@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class TestPolicyZaur extends TestBase {
+public class TestPolicyZaur extends TestBase2 {
 
 
     @Test

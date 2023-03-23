@@ -4,9 +4,12 @@ import pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.TestBase;
+import tests.TestBase2;
 import utils.Driver;
 
-public class EmailJoshgunTest extends TestBase {
+import java.util.logging.Logger;
+
+public class EmailJoshgunTest extends TestBase2 {
 
     //PAGE FACTORY
     @Test
@@ -20,8 +23,11 @@ public class EmailJoshgunTest extends TestBase {
         joinToday.enterJoin2();
         Assert.assertEquals(Driver.getDriver().getTitle(),joinToday.getGetmesage());
 
+        logger.pass("test7");
         Emailp2 emailp2 = new Emailp2();
+        logger.pass("test8");
         emailp2.getEmeailP2();
+        logger.pass("test9");
         emailp2.nextB();
         Assert.assertTrue(Driver.getDriver().getPageSource().contains(emailp2.getGetmagese()));
 

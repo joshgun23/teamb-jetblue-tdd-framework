@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class SignInJoshgun2 extends TestBase{
+public class SignInJoshgun2 extends TestBase2{
 
 
 

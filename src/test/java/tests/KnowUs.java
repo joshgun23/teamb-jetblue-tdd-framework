@@ -10,7 +10,7 @@ import utils.Driver;
 import java.time.Duration;
 
 import static org.testng.Assert.assertTrue;
-public class KnowUs extends TestBase {
+public class KnowUs extends TestBase2 {
 
 
     @Test

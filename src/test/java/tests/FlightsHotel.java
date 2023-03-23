@@ -8,7 +8,7 @@ import utils.Driver;
 import utils.SeleniumUtils;
 
 
-public class FlightsHotel extends TestBase {
+public class FlightsHotel extends TestBase2 {
 
     @Test
 

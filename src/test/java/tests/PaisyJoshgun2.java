@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class PaisyJoshgun2 extends TestBase{
+public class PaisyJoshgun2 extends TestBase2{
 
 
 

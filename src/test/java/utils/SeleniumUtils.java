@@ -1,9 +1,11 @@
 package utils;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -272,6 +274,20 @@ public class SeleniumUtils {
     public static void jsClick(WebElement webelement) {
         JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         js.executeScript("arguments[0].click();", webelement);
+    }
+    public static String getScreenshot(String name)  {
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        String fileName = name + date + ".png";
+        String target = System.getProperty("user.dir") + "/target/extentReports/" + fileName;
+        File finalDestination = new File(target);
+        try {
+            FileUtils.copyFile(source, finalDestination);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileName;
     }
     public static void uploadFile(By chooseFileButton, String pathToAFileToBeUploaded ) {
         Driver.getDriver().findElement(chooseFileButton).sendKeys(pathToAFileToBeUploaded);
