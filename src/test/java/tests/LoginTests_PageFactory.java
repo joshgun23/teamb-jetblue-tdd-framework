@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 import utils.ConfigReader;
 import utils.Driver;
 
-public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
+public class LoginTests_PageFactory extends TestBaseForLogin{
 
 
     //PAGE FACTORY
-    @Test
+    @Test (groups = {"smoke"})
     public void negativ() throws InterruptedException {
 
         LoginJetB_2 loginJetB = new LoginJetB_2();
@@ -30,7 +30,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertEquals( Driver.getDriver().getTitle(), "Sign In | JetBlue");//when we do it test webaplication not give permisein to sign in
 
     }
-    @Test //(priority = 2)
+    @Test (groups = {"smoke"})
     public void negatovPagefactory2(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -40,7 +40,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory3(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -50,7 +50,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory4(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -60,7 +60,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory5(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -70,7 +70,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory6(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -80,7 +80,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory7(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();
@@ -90,7 +90,7 @@ public class LoginTests_PageFactory extends TestBase_For_Login_Page_Factory{
         Assert.assertNotEquals( Driver.getDriver().getTitle(), "JetBlue | Airline Tickets, Flights & Airfare: Book Direct - Official Site");
 
     }
-    @Test
+    @Test (groups = {"smoke"})
     public void negatovPagefactory8(){
 
         LoginJetB_2 loginPage = new LoginJetB_2();

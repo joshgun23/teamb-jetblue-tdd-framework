@@ -9,7 +9,7 @@ import utils.Driver;
 import static org.testng.Assert.assertTrue;
 
 
-public class knowUs_Eric extends TestBase {
+public class knowUs_Eric extends TestBase2 {
 
 
     @Test

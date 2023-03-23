@@ -29,7 +29,7 @@ public class LoginTests_POM extends TestBase_For_Login_POM{
         //when we do it test webaplication not give permisein to sign in
 
     }
-    @Test (groups = {"smoke"})//(priority = 2)
+    @Test //(priority = 2)
     public void negativ2() throws InterruptedException  {
 
 

@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Driver;
 
-public class inAction_M extends TestBase {
+public class inAction_M extends TestBase2 {
 
 
 
