@@ -1,13 +1,12 @@
 package tests;
-
-import pages.*;
 import org.testng.annotations.Test;
+import pages.*;
 
 //import static utils.Driver;
 
 public class FlightBooking_Z extends TestBase2{
-    @Test (priority = 1,enabled = false)
-    public void bookFlight() {
+    @Test (priority = 1 ,enabled = false)
+    public void bookFlight()  {
         HomePage_Z homePage = new HomePage_Z();
         homePage.selectOneWay();
         homePage.enterOrigin("JFK");
