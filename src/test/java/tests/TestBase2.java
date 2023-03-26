@@ -51,7 +51,7 @@ public class TestBase2 {protected static ExtentReports extentReport; // manages 
     public void setUpEachMethod(Method method)  {
 
         Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         WebElement element1 = Driver.getDriver().findElement(By.xpath("//*[@class=\"truste_popframe\"]"));
         Driver.getDriver().switchTo().frame(element1);
