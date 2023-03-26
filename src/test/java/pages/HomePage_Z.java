@@ -5,15 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.Driver;
 
 import java.util.List;
 
 public class HomePage_Z {
     public HomePage_Z() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    WebDriver driver;
+
 
     @FindBy(css = "a[data-analytics-id='hdr-book-trip']")
     WebElement flightsTabLink;
@@ -53,7 +54,7 @@ public class HomePage_Z {
 
 
     public HomePage_Z(WebDriver driver) {
-        this.driver = driver;
+        PageFactory.initElements(driver, this);
 
     }
 
@@ -79,7 +80,7 @@ public class HomePage_Z {
 
     public void selectPassengers(int adults, int children, int infants) {
 
-        WebElement passengerDropdown = driver.findElement(By.cssSelector("button[data-testid='jb-booker-dropdown__button--pax']"));
+        WebElement passengerDropdown = Driver.getDriver().findElement(By.cssSelector("button[data-testid='jb-booker-dropdown__button--pax']"));
         passengerDropdown.click();
 
         for (int i = 0; i < passengerStepperLabels.size(); i++) {

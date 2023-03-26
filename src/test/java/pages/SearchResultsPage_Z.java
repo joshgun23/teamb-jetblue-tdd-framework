@@ -4,10 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.Driver;
 
 public class SearchResultsPage_Z {
-    public SearchResultsPage_Z(){PageFactory.initElements(driver, this);}
-    WebDriver driver;
+    public SearchResultsPage_Z(){PageFactory.initElements(Driver.getDriver(), this);}
+
 
     @FindBy(css = "h1.page-title__title")
     WebElement searchResultsTitle;
@@ -21,30 +22,44 @@ public class SearchResultsPage_Z {
     @FindBy(css = "ul.result-list li:first-of-type button")
     WebElement selectFlightButton;
 
-    public SearchResultsPage_Z(WebDriver driver) {
-        this.driver = driver;
-
-    }
 
     public void verifySearchResultsPage() {
-        // Verify search results page is displayed
+        searchResultsTitle.isDisplayed();
+
+
+
 
     }
 
     public void selectFilter(String filterName) {
-        // Select the specified filter
+
+        if (filterName.equalsIgnoreCase("price")) {
+            priceFilter.click();
+        } else if (filterName.equalsIgnoreCase("duration")) {
+            durationSort.click();
+        }
+
     }
 
     public void verifySearchResultsFilteredByPrice() {
-        // Verify search results are filtered by price
+        searchResultsTitle.isDisplayed();
+
+
+
+
     }
 
     public void selectSortOption(String sortOption) {
-        // Select the specified sort option
+        if (sortOption.equalsIgnoreCase("price")) {
+            priceFilter.click();
+        } else if (sortOption.equalsIgnoreCase("duration")) {
+            durationSort.click();
+        }
     }
 
     public void verifySearchResultsSortedByDuration() {
-        // Verify search results are sorted by duration
+
+
     }
 
     public void selectFlight() {

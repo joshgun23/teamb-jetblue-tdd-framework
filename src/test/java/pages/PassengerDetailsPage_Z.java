@@ -4,10 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.Driver;
 
 public class PassengerDetailsPage_Z {
-    public PassengerDetailsPage_Z(){PageFactory.initElements(driver, this);}
-    WebDriver driver;
+    public PassengerDetailsPage_Z(){PageFactory.initElements(Driver.getDriver(), this);}
+
     @FindBy(id = "jb-passenger-first-name-0")
     WebElement firstNameInput;
 
@@ -26,10 +27,6 @@ public class PassengerDetailsPage_Z {
     @FindBy(css = "button[data-analytics-id='btn-continue']")
     WebElement continueButton;
 
-    public PassengerDetailsPage_Z(WebDriver driver) {
-        this.driver = driver;
-
-    }
 
     public void enterPassengerDetails(String firstName, String lastName, String gender, String dateOfBirth) {
         firstNameInput.sendKeys(firstName);

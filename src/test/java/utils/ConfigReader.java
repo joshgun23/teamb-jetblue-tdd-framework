@@ -11,7 +11,7 @@ public class ConfigReader {
     static{
         properties= new Properties();
         try {
-            properties.load(Files.newInputStream(Path.of(".config.properties")));
+            properties.load(Files.newInputStream(Path.of("config.properties")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

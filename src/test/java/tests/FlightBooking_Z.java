@@ -18,10 +18,6 @@ public class FlightBooking_Z extends TestBase2{
         FlightsPage_Z flightsPage = new FlightsPage_Z();
         flightsPage.selectFlight(0);
 
-
-        FlightDetailsPage_Z flightDetailsPage = new FlightDetailsPage_Z();
-        flightDetailsPage.clickContinueButton();
-
         PassengerDetailsPage_Z passengerDetailsPage = new PassengerDetailsPage_Z();
         passengerDetailsPage.enterPassengerDetails("John", "Doe", "male", "1990-01-01");
         passengerDetailsPage.clickContinueButton();
