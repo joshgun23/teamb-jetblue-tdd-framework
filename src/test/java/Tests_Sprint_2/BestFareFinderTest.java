@@ -45,7 +45,7 @@ public class BestFareFinderTest extends TestBase2 {
         BestFareFinderPage bestFareFinderPage = new BestFareFinderPage();
         bestFareFinderPage.clickOnBook();
         bestFareFinderPage.clickOnBestFareFinder();
-        new BestFareFinderPage().flightFrom(airportCode1);
+        new BestFareFinderPage().flightFromExplore(airportCode1);
         new BestFareFinderPage().flightTo(airportCode2);
         Assert.assertEquals(bestFareFinderPage.getErrorMessage().getText(), "Uh-oh. It doesn't look like we fly between those two locations. Please try another city nearby." );
     }
