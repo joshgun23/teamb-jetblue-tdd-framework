@@ -28,7 +28,7 @@ public class Travel_info_Z_Test extends TestBase2 {
 
     @DataProvider
     public Object[][] provideTestData()  {
-        return new SeleniumUtils().readCSV("data.csv");
+        return  SeleniumUtils.readFromCSV("data.csv");
     }
 }
 
