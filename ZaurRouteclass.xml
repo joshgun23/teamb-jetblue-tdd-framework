@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Teamb Tests">
+    <!--    suite represents a group of test cases e.g regression test suite-->
+
+    <test name="JetBlue Tests">
+
+        <classes>
+            <class name="Tests_Sprint_2.ByRouteZaur"/>
+            <class name="Tests_Sprint_2.FlightTruckerZaur"/>
+        </classes>
+
+
+
+
+
+
+    </test>
+
+
+
+
+</suite>
