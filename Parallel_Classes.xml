@@ -10,7 +10,6 @@
         <classes>
             <class name="tests.knowUs_Eric"></class>
             <class name="tests.TrueBlueJoshgun2"></class>
-            <class name="tests.SignInJoshgun2"></class>
             <class name="tests.PaisyJoshgun2"></class>
 
         </classes>

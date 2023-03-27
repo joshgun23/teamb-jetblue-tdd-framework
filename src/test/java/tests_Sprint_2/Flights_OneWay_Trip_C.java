@@ -27,7 +27,7 @@ public class Flights_OneWay_Trip_C extends TestBase2 {
         Assert.assertEquals(Driver.getDriver().getTitle(), "JetBlue | Select Flights");
     }
 
-    @DataProvider //(parallel = true)
+    @DataProvider (parallel = true)
     public Object[][] provideData2() {
         return SeleniumUtils.readFromCSV("DATA_ONEWAY_C.csv");
     }

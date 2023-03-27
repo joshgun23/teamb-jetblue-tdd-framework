@@ -1,4 +1,4 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

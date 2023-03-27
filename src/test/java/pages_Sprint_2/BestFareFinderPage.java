@@ -18,7 +18,7 @@ public class BestFareFinderPage {
 
     public BestFareFinderPage () {
         PageFactory.initElements(Driver.getDriver(), this);
-        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
     }
 
@@ -75,20 +75,23 @@ public class BestFareFinderPage {
         fromInputField.click();
         fromInputField.clear();
         fromInputField.sendKeys(from);
-        fromInputField.sendKeys(Keys.ENTER);
-    }
 
+    }
 
     public void flightTo(String to) {
         wait.until(ExpectedConditions.elementToBeClickable(this.toInputField)).click();
-        toInputField.click();
         toInputField.clear();
         toInputField.sendKeys(to);
+    }
+    public void flightFromExplore(String city) {
+        wait.until(ExpectedConditions.elementToBeClickable(this.fromInputField)).click();
+        fromInputField.clear();
+        fromInputField.sendKeys(city);
+        fromInputField.sendKeys(Keys.ENTER);
     }
 
     public void flightToExplore(String city) {
         wait.until(ExpectedConditions.elementToBeClickable(this.toInputField)).click();
-        toInputField.click();
         toInputField.clear();
         toInputField.sendKeys(city);
         toInputField.sendKeys(Keys.ENTER);
