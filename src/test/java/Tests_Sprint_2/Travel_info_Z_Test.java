@@ -15,7 +15,9 @@ public class Travel_info_Z_Test extends TestBase2 {
     public void fillOutForm(String fullName, String email, String phone, String alternatePhone) {
 
         Travel_info_Z travelInfoPage = new Travel_info_Z();
-        travelInfoPage.fullName.sendKeys(fullName);
+        travelInfoPage.fillOutForm(fullName, email, phone, alternatePhone);
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("Travel Info"));
+
     }
 
     @DataProvider
