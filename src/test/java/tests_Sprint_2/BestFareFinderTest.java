@@ -1,4 +1,4 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -73,9 +73,6 @@ public class BestFareFinderTest extends TestBase2 {
                 {"SFO", "CDG"}
         } ;
     }
-
-
-
 
 }
 

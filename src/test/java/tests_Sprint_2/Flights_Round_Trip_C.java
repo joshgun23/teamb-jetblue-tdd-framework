@@ -1,4 +1,4 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -7,7 +7,7 @@ import tests.TestBase2;
 import utils.Driver;
 import utils.SeleniumUtils;
 
-public class Flights_C extends TestBase2 {
+public class Flights_Round_Trip_C extends TestBase2 {
 
     @Test(dataProvider = "provideData1")
     public void test(String from, String to, String depart, String reTurn) throws InterruptedException {

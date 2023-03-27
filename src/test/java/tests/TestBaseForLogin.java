@@ -20,9 +20,9 @@ import utils.SeleniumUtils;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
-public class TestBaseForLogin {protected static ExtentReports extentReport; // manages the report generation
-    protected static ExtentSparkReporter htmlReport; // generates the html report
-    protected static ExtentTest logger; // manages the individual test steps and logs
+public class TestBaseForLogin {protected static ExtentReports extentReport;
+    protected static ExtentSparkReporter htmlReport;
+    protected static ExtentTest logger;
 
     @BeforeSuite(alwaysRun = true)
     public void setupReport(){

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel Tests" parallel="classes" thread-count="6">
+
+
+    <test name="TeamB">
+
+
+
+        <classes>
+            <class name="tests.knowUs_Eric"></class>
+            <class name="tests.TrueBlueJoshgun2"></class>
+            <class name="tests.SignInJoshgun2"></class>
+            <class name="tests.PaisyJoshgun2"></class>
+
+        </classes>
+
+
+    </test>
+
+</suite>
