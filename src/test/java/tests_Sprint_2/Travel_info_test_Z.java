@@ -1,9 +1,6 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import tests.TestBase2;
 import utils.Driver;

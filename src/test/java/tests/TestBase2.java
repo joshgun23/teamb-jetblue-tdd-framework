@@ -25,9 +25,9 @@ import java.nio.file.Path;
 import java.time.Duration;
 import java.util.Properties;
 
-public class TestBase2 {protected static ExtentReports extentReport; // manages the report generation
-    protected static ExtentSparkReporter htmlReport; // generates the html report
-    protected static ExtentTest logger; // manages the individual test steps and logs
+public class TestBase2 {protected static ExtentReports extentReport;
+    protected static ExtentSparkReporter htmlReport;
+    protected static ExtentTest logger;
 
     @BeforeSuite(alwaysRun = true)
     public void setupReport(){

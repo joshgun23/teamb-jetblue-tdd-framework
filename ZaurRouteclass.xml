@@ -6,8 +6,8 @@
     <test name="JetBlue Tests">
 
         <classes>
-            <class name="Tests_Sprint_2.ByRouteZaur"/>
-            <class name="Tests_Sprint_2.FlightTruckerZaur"/>
+            <class name="tests_Sprint_2.ByRouteZaur"/>
+            <class name="tests_Sprint_2.FlightTruckerZaur"/>
         </classes>
 
 

@@ -4,35 +4,60 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 
-private static WebDriver driver;
+    private static ThreadLocal<WebDriver> drivers =  new ThreadLocal<>();
 
-    private Driver(){} //to prevent instantiation
+    private Driver(){}
 
-    public static WebDriver getDriver(){
+    public static synchronized WebDriver getDriver(){
 
-        String browser = ConfigReader.getProperty("browser");
 
-        if(driver == null) { // check if the driver is initialized
+        String browser = System.getProperty("browser");
+
+        if (browser == null){
+            browser = ConfigReader.getProperty("browser");
+        }
+
+
+        if(drivers.get() == null) {
+
 
             switch (browser) {
                 case "chrome":
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    drivers.set(new ChromeDriver(options));
+                    break;
+                case "headlessChrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--remote-allow-origins=*");
-                    driver = new ChromeDriver(chromeOptions); // Coshgun I add fix for chrome browser-Ziyoda
+                    chromeOptions.addArguments("--headless");
+                    drivers.set(new ChromeDriver(chromeOptions));
                     break;
                 case "edge":
-                    driver = new EdgeDriver();
+                    drivers.set(new EdgeDriver());
+                    break;
+                case "headlessEdge":
+                    EdgeOptions edgeOptions = new EdgeOptions();
+                    edgeOptions.addArguments("--headless");
+                    drivers.set(new EdgeDriver(edgeOptions));
                     break;
                 case "firefox":
-                    driver = new FirefoxDriver();
+                    drivers.set(new FirefoxDriver());
+                    break;
+                case "headlessFirefox":
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.addArguments("--headless");
+                    drivers.set(new FirefoxDriver(firefoxOptions));
                     break;
                 case "safari":
-                    driver = new SafariDriver();
+                    drivers.set(new SafariDriver());
                     break;
                 default:
                     throw new RuntimeException("Unsupported browser");
@@ -42,15 +67,15 @@ private static WebDriver driver;
 
         }
 
-        return driver; // if already initialized previously, return this initialized object
+        return  drivers.get();
     }
 
 
-    public static void quitDriver(){
+    public synchronized static void quitDriver(){
 
-        if(driver != null){  // if the driver is active
-            driver.quit();  // quit the driver
-            driver = null;  // set the driver variable value to null because next initialization of driver checks if it is null
+        if(drivers.get() != null){
+            drivers.get().quit();
+            drivers.remove();
         }
 
     }

@@ -1,13 +1,10 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
 import pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tests.TestBase;
 import tests.TestBase2;
 import utils.Driver;
-
-import java.util.logging.Logger;
 
 public class EmailJoshgunTest extends TestBase2 {
 

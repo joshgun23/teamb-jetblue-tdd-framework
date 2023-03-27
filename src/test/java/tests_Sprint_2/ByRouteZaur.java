@@ -1,4 +1,4 @@
-package Tests_Sprint_2;
+package tests_Sprint_2;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
