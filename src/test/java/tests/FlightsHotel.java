@@ -17,7 +17,7 @@ public class FlightsHotel extends TestBase2 {
         JetBlueHomePage jetBlueHomePage = new JetBlueHomePage();
         Thread.sleep(1000);
         jetBlueHomePage.getFlightsHotelButton().click();
-        Assert.assertTrue(jetBlueHomePage.getFlightsHotelButton().isDisplayed());
+        Assert.assertTrue(jetBlueHomePage.getSearchFlightsHotelButton().isDisplayed());
 
     }
 
