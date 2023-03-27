@@ -1,15 +1,22 @@
 package pages_Sprint_2;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Driver;
 
+import java.time.Duration;
 
 
 public class Travel_info_Z  {
 
+    private WebDriverWait wait ;
+
     public   Travel_info_Z() {
         PageFactory.initElements(Driver.getDriver(), this);
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
     }
     @FindBy(xpath = "//span[contains(text(),'Travel Info')]")
     public WebElement travelInfo;
@@ -37,5 +44,13 @@ public class Travel_info_Z  {
     public WebElement phone;
 
    @FindBy(css = "jb-form-field-container:nth-of-type(4)  .avenir.b--solid.ba.bg-white.body.jb-form-field.jb-input.ng-pristine.ng-untouched.ng-valid.pb2.pl3.pr2.pt4.w-100")
-    public WebElement alternatePhone; }
+    public WebElement alternatePhone;
+
+   public void fillOutForm(String fullName, String email, String phone, String alternatePhone) {
+       wait.until(ExpectedConditions.visibilityOf(this.travelInfo));
+       this.fullName.sendKeys(fullName);
+       this.email.sendKeys(email);
+       this.phone.sendKeys(phone);
+       this.alternatePhone.sendKeys(alternatePhone);
+   } }
 
