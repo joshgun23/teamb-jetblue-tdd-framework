@@ -23,7 +23,7 @@ private static WebDriver driver;
                 case "chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--remote-allow-origins=*");
-                    driver = new ChromeDriver(chromeOptions); // Coshgun I add fix for chrome browser-Ziyoda
+                    driver = new ChromeDriver(chromeOptions);
                     break;
                 case "edge":
                     driver = new EdgeDriver();
